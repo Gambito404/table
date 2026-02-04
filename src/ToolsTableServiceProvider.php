@@ -5,7 +5,7 @@ namespace ToolsTable\ToolsTable;
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
 use ToolsTable\ToolsTable\Components\ToolsTable;
-use ToolsTable\ToolsTable\Commands\TestCommand;
+use ToolsTable\ToolsTable\Commands\MakeTableCommand;
 
 class ToolsTableServiceProvider extends ServiceProvider
 {
@@ -13,7 +13,7 @@ class ToolsTableServiceProvider extends ServiceProvider
     {
         if ($this->app->runningInConsole()) {
             $this->commands([
-                TestCommand::class,
+                MakeTableCommand::class,
             ]);
         }
 
