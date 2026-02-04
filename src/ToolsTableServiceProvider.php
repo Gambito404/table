@@ -4,8 +4,8 @@ namespace ToolsTable\ToolsTable;
 
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
-use ToolsTable\ToolsTable\Commands\TestCommand;
 use ToolsTable\ToolsTable\Components\ToolsTable;
+use ToolsTable\ToolsTable\Commands\TestCommand;
 
 class ToolsTableServiceProvider extends ServiceProvider
 {
