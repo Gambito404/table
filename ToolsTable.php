@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendor\ToolsTable\Components;
+namespace ToolsTable\ToolsTable\Components;
 
 use Livewire\Component;
 

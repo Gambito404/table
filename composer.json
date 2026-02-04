@@ -1,11 +1,11 @@
 {
-    "name": "your-vendor/tools-table",
+    "name": "tools-table/tools-table",
     "description": "Paquete de tablas dinámicas compatible con Livewire 3 y 4.",
     "type": "library",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "YourVendor\\ToolsTable\\": "src/"
+            "ToolsTable\\ToolsTable\\": "src/"
         }
     },
     "authors": [
@@ -22,7 +22,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "YourVendor\\ToolsTable\\ToolsTableServiceProvider"
+                "ToolsTable\\ToolsTable\\ToolsTableServiceProvider"
             ]
         }
     },

@@ -1,6 +1,6 @@
 <?php
 
-namespace YourVendor\ToolsTable\Commands;
+namespace ToolsTable\ToolsTable\Commands;
 
 use Illuminate\Console\Command;
 

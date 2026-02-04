@@ -1,11 +1,11 @@
 <?php
 
-namespace YourVendor\ToolsTable;
+namespace ToolsTable\ToolsTable;
 
 use Illuminate\Support\ServiceProvider;
 use Livewire\Livewire;
-use YourVendor\ToolsTable\Commands\TestCommand;
-use YourVendor\ToolsTable\Components\ToolsTable;
+use ToolsTable\ToolsTable\Commands\TestCommand;
+use ToolsTable\ToolsTable\Components\ToolsTable;
 
 class ToolsTableServiceProvider extends ServiceProvider
 {
