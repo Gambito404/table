@@ -2,23 +2,12 @@
 
 namespace {{ namespace }};
 
-use Gambito404\LivewireTables\Support\LivewireTable;
-use Illuminate\Database\Eloquent\Builder;
-use App\Models\User;
+use Livewire\Component;
 
-class {{ class }} extends LivewireTable
+class {{ class }} extends Component
 {
-    public function query(): Builder
+    public function render()
     {
-        return User::query();
-    }
-
-    public function columns(): array
-    {
-        return [
-            ['key' => 'id', 'label' => 'ID'],
-            ['key' => 'name', 'label' => 'Name'],
-            ['key' => 'email', 'label' => 'Email'],
-        ];
+        return view('livewire.tables.{{ view_name }}');
     }
 }

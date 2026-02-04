@@ -14,9 +14,10 @@ class MakeTableCommand extends Command
     public function handle(): int
     {
         $name = Str::studly($this->argument('name'));
+        $kebabName = Str::kebab($name);
 
         $componentPath = app_path("Livewire/Tables/{$name}.php");
-        $viewPath = resource_path("views/livewire/table/" . Str::kebab($name) . ".blade.php");
+        $viewPath = resource_path("views/livewire/tables/" . $kebabName . ".blade.php");
 
         File::ensureDirectoryExists(dirname($componentPath));
         File::ensureDirectoryExists(dirname($viewPath));
@@ -31,7 +32,8 @@ class MakeTableCommand extends Command
             $this->viewStub()
         );
 
-        $this->info("Livewire table component [$name] created successfully.");
+        $this->info("Livewire table component [{$name}] created successfully.");
+        $this->comment("Usa tu componente así: <livewire:tables.{$kebabName} />");
 
         return self::SUCCESS;
     }
@@ -40,8 +42,8 @@ class MakeTableCommand extends Command
     {
         $stub = File::get(__DIR__ . '/../../stubs/table-component.stub.php');
         return str_replace(
-            ['{{ class }}', '{{ namespace }}'],
-            [$name, 'App\\Livewire\\Tables'],
+            ['{{ class }}', '{{ namespace }}', '{{ view_name }}'],
+            [$name, 'App\\Livewire\\Tables', Str::kebab($name)],
             $stub
         );
     }
